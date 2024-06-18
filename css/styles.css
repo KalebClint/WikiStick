@@ -1,37 +1,65 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #76e3ac;
     color: #333;
+    margin: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Gap between columns */
+
 }
 
 #header {
     color: #0056b3;
     text-align: center;
     margin: 0 auto;
+    grid-column: 1 / -1; /* Span across all columns */
 }
 
+
+\\Tables
 table {
     width: 100%;
     border-collapse: collapse;
 }
+.left-content {
+    grid-column: 1; /* Place left content in the first column */
+}
+
+.right-content {
+    grid-column: 2; /* Place right content in the second column */
+}
+
+.right-aligned-table {
+    width: 100%; /* Makes the table take up the full width of its container */
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+
+
 
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    background-color: #9faba5;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #8aa698;
     font-weight: bold;
 }
 
+\\ This is for the links
 a {
     text-decoration: none;
     color: #007BFF;
 }
-
 a:hover {
     text-decoration: underline;
 }
+
+
 
