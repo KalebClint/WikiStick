@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #76e3ac;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+#header {
+    color: #0056b3;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#description {
+    color: black;
+    text-align: center;
+}
+
+/* Tables */
+table {
+    margin: 0 auto; /* Center the table within its container */
+    border-collapse: collapse;
+    width: auto; /* Adjust table width if necessary */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: #9faba5;
+}
+
+th {
+    background-color: #8aa698;
+    font-weight: bold;
+}
+
+/* This is for the links */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.link-container {
+    text-align: center; /* Center aligns links horizontally */
+    margin-top: 20px; /* Optional: Adds space above the links */
+    margin-bottom: 20px;
+}
+
+.link-container a {
+    text-decoration: none;
+    color: #007BFF;
+    margin: 0 10px; /* Adjust spacing between links */
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+}
+
+
