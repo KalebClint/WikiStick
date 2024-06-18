@@ -60,3 +60,19 @@ body {
     margin: 0 auto;
     grid-column: 1 / -1; /* Span across all columns */
 }
+#center{
+  text-align: center;
+}
+.link-container {
+    text-align: center; /* Center aligns the link horizontally */
+}
+
+.link-container a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+}
+

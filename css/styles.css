@@ -46,3 +46,17 @@ a:hover {
     text-decoration: underline;
 }
 
+.link-container {
+    text-align: center; /* Center aligns the link horizontally */
+    padding: 10px;
+}
+
+.link-container a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+}
+
