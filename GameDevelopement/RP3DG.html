@@ -26,10 +26,21 @@
       Here I will go over basically how much I understand of how it works, as so far its probably
       the most complex feature I had implemented into Godot. 
       <br>
-      Basically the map is made up of cells, each cell has four wals and four doors, the grid map
+      Basically the map is made up of cells, each cell has four walls and four doors, the grid map
       is used to create rooms with cells together. Each cell has an index dependant on the type, 
         say the index is 0 then the type is a room cell. or 1 = door cell. 2 = hallway cell and 
         3 = to a border cell. Further numbers is just for different types of rooms.
+        <br>
+          When two cells are put next to each other, it gets the two edges that are right next to
+          each other, and does something to it dependent on the type of cell. For instance if its a 
+          doorway next to a hallway, it gets rid of both walls, and the door of the hallway cell,
+          but it keeps the doorway to the doorway cell. It goes through all cells and edges and does this
+          until their all finished.
+          <br>
+         To set the door cells I belive it gets two rooms, and find the closest cells between those two 
+              rooms, then sets those as the doors and generates a hallway imbetween them. I'll admit I'm
+              not certain how the hallway stuff works tho, something to do with triangulation.
+              
       
     </p>
   
@@ -44,15 +55,29 @@
         <table>
             <tbody>
               
-              <tr> <td>Tutorial Link:</td> <td> <a href="" target="_blank">Tutorial</a></td></tr>
+              <tr> <td>Tutorial Link:</td> <td> <a href="https://www.youtube.com/watch?v=h64U6j_sFgs" target="_blank">Godot.4 3D Procederual Dungeon</a></td></tr>
               <tr> <td>Engine:</td> <td>Godot</td> </tr>
               <tr> <td>Game:</td> <td>Statues Remake</td> </tr>
               <tr> <td>Complexity:</td> <td>Complex</td> </tr>
               <tr> <td>Function:</td> <td>Grid Maps, Triangulation, otherstuff</td> </tr>
+              <tr> <td>Learned:</td> <td>Grid Maps, @tool, types</td> </tr>
 
             </tbody>
         </table>
     </div>
+  
+    <h3>What I learned</h3>
+  <p>This tutorial was actually very helpful for my learning, as I had never before used a grid map, and the way the
+    person coded was pretty different to mine, showing me more options. First of these was the grid map, I had never used
+    these before but the tutorial showed me the basics of how it works and it seems like something that could be pretty 
+    useful for future projects.
+    <br>
+      Along with this was a couple fo smallers things, by putting @tool at the top of the script it allows you to use the 
+      script in the editor, meanign you don't have to run the game every time you want to test it. The other is that you can
+      specifiy variable types by using say
+      <br><b>var example : int</b>
+  </p>
+  
   
           <h4>Related Pages</h4>
         <a href="statuesRemake.html">Statues Remake</a> <br>

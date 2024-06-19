@@ -15,7 +15,7 @@ table {
 .right-aligned-table {
     width: 100%; /* Makes the table take up the full width of its container */
     border-collapse: collapse;
-    border: 1px solid #ddd;
+    
 }
 th {
     background-color: #8aa698;
@@ -51,9 +51,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     gap: 20px; /* Gap between columns */
-
 }
-
 #header {
     color: #0056b3;
     text-align: center;
