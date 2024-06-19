@@ -27,8 +27,9 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center;
     background-color: #9faba5;
+
 }
 
 th {
@@ -60,6 +61,13 @@ a:hover {
 
 .link-container a:hover {
     text-decoration: underline;
+}
+
+#random-links-table {
+    border-collapse: separate; /* Ensure border-spacing works */
+    border-spacing: 20px 0px; /* Adjust the spacing as needed */
+    margin: 0 auto; /* Center the table within its container */
+    width: 900px; /* Adjust table width if necessary */
 }
 
 
