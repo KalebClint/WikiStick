@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
         { url: 'GameDevelopement/RP3DG.html', name: 'Random Procedual 3D Map Generation' },
         { url: 'GameDevelopement/statues.html', name: 'Statues' },
         { url: 'GameDevelopement/statuesRemake.html', name: 'Statues Remake' },
-        { url: "GameDevelopement/vampireVille.html", name: "A Sunny Day At Vampireville" }
+        { url: 'CyberSecurity/NetworkTools.html', name: 'Network Tools' },
+        { url: 'PhysicsStudies/SpecialRelativity/timeDilation.html', name: 'Acceleration - Time Dilation Calculator' },
+        { url: 'PhysicsStudies/SpecialRelativity/specialRelativity.html', name: 'Special Relativity' },
+        { url: "Blender/ABUW.html", name: "Average Blender User Workspace" }
 
     ];
 
