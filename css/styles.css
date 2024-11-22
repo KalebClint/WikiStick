@@ -73,3 +73,11 @@ a:hover {
 
 
 
+code {
+        font-family: monospace;
+        background-color: #9bfdf0;
+        padding: 10px;
+        border: 1px solid #2f00ff;
+        display: block;
+    }
+

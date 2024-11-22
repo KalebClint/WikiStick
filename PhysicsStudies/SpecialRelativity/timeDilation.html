@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikistick</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/sidetoside.css">
+</head>
+<body>
+  
+      <h1 id="header">Acceleraion - Time Dilation Calculator</h1>
+  
+      <div class="left-content">
+
+          <div class="link-container">
+              <a href="../../index.html">Home</a>
+              <a href="../PhysicsStudies.html">Physics Studies</a>
+          </div>
+
+
+          <h3>Overview</h3>
+          <p id="overiew">
+              This was a pretty random project, at one point I started getting pretty interested in Special relativity thanks to couple random youtube
+              videos. I've always enjoyed more advanced parts of physics, things like Einstines thoery of relativity, Quantumn mechanics, etc. But I found
+              out about an interesting part of special relativity. I've always known about how gravity affects time and space, but turns out so does speed.
+              <br> So basically I created a simple calculator that will calculate how long it will take to accelerate to a certain speed, assuming the acceleration
+              is constant. This value will be different to what one might expect due to time Dilation. The faster you accelerate, the longer it takes to accelerate.
+          </p>
+
+
+          <h3>First Version Code</h3>
+          <pre><code>
+            using System;
+
+            public class calc
+            {
+            
+            // This is a calculator that will calculate how long it will take to get up
+            // to a certain speed, taking time dilation into account.
+            
+            // Hopefully.
+            
+            private const double c = 299792458; // Speed of light in meters
+            
+            public static double accuracy = 1; // Measured in Meters
+            public static double speed; // Percentage of c
+            public static double acceleration = 1000; // 1000 meters per second
+            
+            //This is approximately equal to 1 meter as a percentage of the speed of light.
+            public static double time;
+            
+            public static double LorentzFactor;
+            
+            public static double speedPercentage = speed / c;
+            
+            //    1 / SQRT( 1 - (u^2)  )  --- Lorentz Factor
+            // u being the percentage 
+            
+            static void Main(){
+            
+                time = 0;
+                speed = 0;
+                calculate();
+            
+            }
+            
+            
+            static void calculate(){
+                while( speed < (c - accuracy)){
+                    
+                speedPercentage = speed / c;
+                    
+                LorentzFactor = 1 / (Math.Sqrt( 1 - (speedPercentage*speedPercentage))  );
+                
+                
+                // How many Seconds
+                speed += accuracy; // m
+                time += (accuracy / acceleration ) * LorentzFactor;
+                
+                // How many meters per second
+                //speed += acceleration / (1 * LorentzFactor);
+                //time += 1;
+                
+                }
+                
+                time = time / 60;
+                time = time / 60;
+                time = time / 24;
+                
+                Console.WriteLine("Accuracy: " + accuracy);
+                Console.WriteLine("(m/s) Acceleration: " + acceleration);
+                Console.WriteLine("");
+                Console.WriteLine("Days: " + time);
+                Console.WriteLine(" Speed: " + (speed / c));
+                Console.WriteLine("Lorentz factor at end: " + LorentzFactor);
+                Console.WriteLine("---");
+            
+            }
+            
+            }
+            
+        </code></pre>
+
+
+      </div>
+  
+<div class = "right-content">
+    <div class="right-aligned-table">
+        <table>
+            <tbody>
+                <tr> <td>Physics Forum Post:</td> <td> <a href="" target="_blank">To Be Added</a></td></tr>
+                <tr> <td>Awesome Channel:</td> <td> <a href="https://www.youtube.com/@Mahesh_Shenoy" target="_blank">Mahesh Shenoy</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+  
+          <h4>Related Pages</h4>
+        <a href="add link here">Relativity Studies</a> <br>
+        <a href="add link here"></a>
+  
+</div>
+  
+</body>
+</html>

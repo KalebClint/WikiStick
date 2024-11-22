@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const selectedPages = [];
 
     // Select random pages and ensure no duplicates
-    while (selectedPages.length < 4) {
+    while (selectedPages.length < 5) {
         const randomPage = getRandomPage();
         if (!selectedPages.includes(randomPage)) {
             selectedPages.push(randomPage);
