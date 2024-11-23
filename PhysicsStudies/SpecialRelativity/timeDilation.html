@@ -102,8 +102,40 @@
             
         </code></pre>
 
+        <br><br>
+        <h3>Second Version Code - Lorentz Value Caclulator</h3>
 
+        <pre><code>
+        using System;
 
+        public class calc
+        {
+        
+        private const double c = 299792458; // Speed of light in meters
+        
+        public static double speed; // Percentage of c
+        
+        public static double LorentzFactor;
+        
+        static void Main(){
+            
+            double speedInput = Convert.ToInt32(Console.ReadLine());
+            speed = speedInput;
+            calculate();
+        }
+        
+        static void calculate(){
+        
+            LorentzFactor = 1 / Math.Sqrt( 1 - (Math.Pow( (speed / c) , 2))  );
+            
+            Console.WriteLine("Percentage Speed: " + speed / c);
+            Console.WriteLine("Lorentz Factor: " + LorentzFactor);
+        
+        }
+        }
+    </code></pre>
+
+        
 
       </div>
   
