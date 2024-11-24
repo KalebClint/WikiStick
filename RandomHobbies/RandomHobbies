@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikistick</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidetoside.css">
+</head>
+<body>
+  
+      <h1 id="header">Hobby Title</h1>
+  
+<div class="left-content">
+  
+  <div class="link-container">
+    <a href="../index.html">Home</a>
+    <a href="RandomHobbies.html">Hobby Collection</a>
+  </div>
+  
+
+    <h3>History</h3>
+    <p></p>
+
+    <h3>Why I like It</h3>
+    <p></p>
+
+    <h3>What I do with it</h3>
+    <p></p>
+
+    <h3>More Details</h3>
+    <p></p>
+              
+ 
+              
+</div>
+  
+<div class = "right-content">
+    <div class="right-aligned-table">
+        <table>
+            <tbody>
+              <tr> <td>Status:</td> <td>Still Do It / Occasionally / Not Anymore</td></tr>
+              <tr> <td>Skill:</td> <td>Begginer / Mediocre / Advanced</td></tr>
+              <tr><td>First Started:<td>Date</td></tr>
+            </tbody>
+        </table>
+    </div>
+  
+  
+</div>
+  
+</body>
+</html>

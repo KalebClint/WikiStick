@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikistick</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/sidetoside.css">
+</head>
+<body>
+  
+      <h1 id="header">Length Contraction Calculator</h1>
+  
+      <div class="left-content">
+
+          <div class="link-container">
+              <a href="../../index.html">Home</a>
+              <a href="../PhysicsStudies.html">Physics Studies</a>
+          </div>
+
+
+          <h3>Overview</h3>
+          <p id="overiew">
+              This was once again, another random project. Right after having made the thing for time Dilation, and getting a bit of help
+              on that. I decided to look a little bit more into Length contraction. When I had first heard about it, I wasn't super
+              interested. I'd thought high speeds affecting time was far more interesting. However, when I looked into it more, I got really
+              interested. To put it simple, travelling at high speeds will literally reduce the distance you have to travel, it will warp
+              space. The formula for how it warps space is as such.
+              <br><br> L = L0 * SQRT( 1 - ( v^2 / c^2 ) )
+              <br><br> I like numbers, and being able to see it properly. So the fact that there was a litteral equation like this, and was so simple,
+              helped me to feel more motivated for it. <br> So I made a calculator. Nothing complex, all it does is take this equation, you input a 
+              distance and a speed, and it calculates the affect of length contraction. I may or may not make a post on this, just to double check
+              if it is correct, but it seems to be from what I've manually calculated.
+          </p>
+
+
+          <h3>Calculator Code</h3>
+          <pre><code>
+            using System;
+
+public class calc
+{
+    private const decimal c = 299792458M; // Speed of light in meters (as a decimal)
+    public static decimal speed; // Measured in meters per second
+    public static decimal distance; // Measured in meters
+    public static decimal length;
+    public static decimal properLength;
+    public static decimal difference;
+    public static decimal count_;
+
+    public static string measurement = "Meters";
+
+    static void Main()
+    {
+        // Example initialization for properLength and speed
+        Console.WriteLine("Length (meters)");
+        
+        properLength = decimal.Parse(Console.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
+        
+        Console.WriteLine("Speed (m / s)");
+        
+        speed = decimal.Parse(Console.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
+
+        calculate();
+    }
+
+    static void calculate()
+    {
+        // Lorentz contraction equation: L = L0 * sqrt(1 − (v^2 / c^2))
+        if (speed >= c)
+        {
+            Console.WriteLine("Error: Speed cannot exceed or equal the speed of light.");
+            return;
+        }
+
+        decimal velocityRatioSquared = (speed / c) * (speed / c);
+        length = properLength * Sqrt(1 - velocityRatioSquared);
+
+        difference = properLength - length;
+
+        //Console.WriteLine($"Contracted Length: {length:F20}, Proper Length: {properLength:F20}, Difference: {difference:F20}");
+
+        // Pass `difference` to Convert method
+        Convert(difference);
+    }
+
+    static void Convert(decimal difference)
+    {
+        int count = 0;
+
+        // Handle zero case
+        if (difference == 0)
+        {
+            Console.WriteLine("Measurement: Meters (m), Length: 0");
+            return;
+        }
+
+        decimal difference_ = difference;
+
+        // Count decimal places until first non-zero
+        while (Math.Abs(difference_) < 1)
+        {
+            difference_ *= 10;
+            count++;
+        }
+
+        string measurement;
+        if (count >= 24) { measurement = "Yoctometers"; } // 10^-24
+        else if (count >= 21) { measurement = "Zeptometers"; count_ = 21;} // 10^-21
+        else if (count >= 18) { measurement = "Attometers"; count_ = 18;} // 10^-18
+        else if (count >= 15) { measurement = "Femtometers"; count_ = 15;} // 10^-15
+        else if (count >= 12) { measurement = "Picometers"; count_ = 12;} // 10^-12
+        else if (count >= 9) { measurement = "Nanometers"; count_ = 9;} // 10^-9
+        else if (count >= 6) { measurement = "Micrometers"; count_ = 6;} // 10^-6
+        else if (count >= 3) { measurement = "Millimeters"; count_ = 3;} // 10^-3
+        else if (count >= 2) { measurement = "Centimeters"; count_ = 2;} // 10^-2
+        else if (count >= 1) { measurement = "Decimeters"; count_ = 1;} // 10^-1
+        else { measurement = "Meters"; } // 10^0
+        
+        decimal bleh = count_;
+
+        while (bleh > 0){
+            
+            difference = difference * 10;
+            bleh = bleh - 1;
+            
+        }
+
+        // Output result
+        Console.WriteLine($"Measurement: {measurement}, Length: " + difference);
+        
+
+
+    }
+
+    // Custom square root method for decimal
+    public static decimal Sqrt(decimal value, decimal precision = 0.0000000000000000001M)
+    {
+        if (value < 0) throw new ArgumentException("Cannot calculate square root of a negative number.");
+        decimal guess = value / 2;
+        decimal result;
+        do
+        {
+            result = guess;
+            guess = (result + value / result) / 2;
+        } while (Math.Abs(result - guess) > precision);
+        return result;
+    }
+}
+
+            
+        </code></pre>
+        
+
+      </div>
+  
+<div class = "right-content">
+    <div class="right-aligned-table">
+        <table>
+            <tbody>
+                <tr> <td>Forum Post:</td> <td> <a href="" target="_blank">None Yet</a></td></tr>
+                <tr> <td>Awesome Channel:</td> <td> <a href="https://www.youtube.com/@Mahesh_Shenoy" target="_blank">Mahesh Shenoy</a></td></tr>
+            </tbody>
+        </table>
+    </div>
+  
+          <h4>Related Pages</h4>
+        <a href="specialRelativity.html">Relativity Studies</a> <br>
+        <a href="add link here"></a>
+  
+
+
+        <h3>What I Learned</h3>
+        <p>Length contraction is fascinating, and I mostly made this calculator becouse I wanted to know the affects it would have on short
+            distances and small speeds. Even though the affect is negligible, I thought it might be a pretty cool random fact that I could 
+            keep on me at all times. For example, did you know, that when you run a hundred meters, (so average speed of 3m/s.) Due to length
+            contraction, you are actually only covering 5 Femtometers less than a 100 meters.
+            <br>Now this is neglible, as a Femtometer is increadibly small, but its still pretty cool.
+        </p>
+
+</div>
+  
+</body>
+</html>
