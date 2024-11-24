@@ -7,13 +7,13 @@ body {
 }
 
 #header {
-    color: #0056b3;
+    color: #e42082;
     text-align: center;
     margin: 0 auto;
 }
 
 #description {
-    color: black;
+    color: #e23d90;
     text-align: center;
 }
 
@@ -40,7 +40,7 @@ th {
 /* This is for the links */
 a {
     text-decoration: none;
-    color: #007BFF;
+    color: #b402e0;
 }
 
 a:hover {
@@ -55,7 +55,7 @@ a:hover {
 
 .link-container a {
     text-decoration: none;
-    color: #007BFF;
+    color: #b402e0;
     margin: 0 10px; /* Adjust spacing between links */
 }
 
@@ -88,8 +88,9 @@ code {
 }
 
 #poem{
-
     
+    font-style: italic;
+    color: #5c0074;
     text-align: center;
 
 }
